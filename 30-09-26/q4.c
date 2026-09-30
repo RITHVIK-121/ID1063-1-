@@ -1,8 +1,11 @@
+//rithvik
+//Date 30-09-26
+
 #include<stdio.h>
-int hour(int hr){
+int hour(int hr){    //converting hours into seconds
 	return hr*60*60;
 }
-int minutes(int min){
+int minutes(int min){   //converting minutes to seconds
 	return min*60;
 }
 int main(){

@@ -1,3 +1,6 @@
+//rithvik
+//Date 30-09-26
+
 #include<stdio.h>
 int main(){
 	long int a,b,product;
