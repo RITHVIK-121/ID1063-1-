@@ -1,5 +1,5 @@
 #include<stdio.h>
-int productEntry(int a[][20],int b[][20],int row,int col,int common);
+int product(int a[][20],int b[][20],int row,int col,int common);
 
 int main(){
 	int r1,c1,r2,c2;
@@ -7,15 +7,29 @@ int main(){
 	scanf("%d",&r1);
 	printf("enter c1: ");
 	scanf("%d",&c1);
-	printf("enter r2:");
-	scanf("%d",&r2);
+	r2=c1;
         printf("enter c2: ");
 	scanf("%d",&c2);
 	int a[r1][c1],b[r2][c2];
+	printf("enter A");
 	for(int i=0;i<r1;i++){
-		
-		printf("enter the entries in row");
 		for(int j=0;j<c1;j++){
-			scanf("%d",&a[i][j]);}
-
+			scanf("%d",&a[i][j]);}}
+	printf("enter B");
+	for(int i=0;i<r2;i++){
+		for(int j=0;j<c2;j++){
+			scanf("%d",&b[i][j]);}}
+	int promatrix[r1][c2];
+	for(int i=0;i<r1;i++){
+		for(int j=0;j<c1;j++){
+			for(int k=0;k<c2;k++){
+				 promatrix[i][k]=product(a[i][j],b[j][k]);
+			}}}
+	for(int i=0;i<r1;i++){
+		for(int j=0;j<c2;j++){
+			printf("%d ",promatrix[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;}
 
