@@ -1,5 +1,11 @@
 #include<stdio.h>
-int product(int a[][20],int b[][20],int row,int col,int common);
+int product(int a[][],int b[][],int row,int col,int common){
+	int sum=0;
+	for(int i=row;i<row+1;i++){
+		for(int j=common;j<common+1;j++){
+			for(int k=0;k<col;col++){
+				sum=sum+a[i][k]*b[k][j];}}}
+	return sum;}
 
 int main(){
 	int r1,c1,r2,c2;
@@ -23,7 +29,7 @@ int main(){
 	for(int i=0;i<r1;i++){
 		for(int j=0;j<c1;j++){
 			for(int k=0;k<c2;k++){
-				 promatrix[i][k]=product(a[i][j],b[j][k]);
+				 promatrix[i][j]=product(a[r1][c1],b[r2][c2],i,j,k);
 			}}}
 	for(int i=0;i<r1;i++){
 		for(int j=0;j<c2;j++){
