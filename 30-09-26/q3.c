@@ -4,7 +4,8 @@
 #include<stdio.h>
 int main(){
 	long int a,b,product;
-	printf("Enter the values of a&b:");
+	printf("Enter the values of a&b:");  //taking input
+					
 	scanf("%ld %ld",&a,&b);
 	product=a*b;
 	printf("The product of two numbers is :%ld\n",product);
